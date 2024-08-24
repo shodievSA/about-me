@@ -1,0 +1,706 @@
+html {
+    height: 100%;
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(static/Inter-Regular.ttf);
+}
+
+body {
+    background-color: black;
+    font-family: Inter;
+    height: 100%;
+    margin: 0;
+}
+
+a, h1, h2, h3, p, li {
+    user-select: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+#nav-bar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15%;
+}
+
+.nav-bar {
+    color: white;
+    position: fixed;
+    z-index: 1;
+    height: 3.25rem;
+}
+
+.nav-bar ul {
+    display: flex;
+    height: 100%;
+    /* justify-content: center; */
+    align-items: center;
+    list-style-type: none;
+    column-gap: 3rem;
+    padding: 0;
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+.nav-links li {
+    z-index: 3;
+}
+
+.nav-links > li:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100%;
+}
+
+.nav-links > li:nth-child(3) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border-right: 1px solid white; */
+    width: 110px;
+    height: 100%;
+}
+
+.nav-links > li:nth-child(4) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border-right: 1px solid white; */
+    width: 120px;
+    height: 100%;
+}
+
+.nav-links > li:nth-child(5) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border-right: 1px solid white; */
+    width: 110px;
+    height: 100%;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.indicator {
+    height: 3.25rem;
+    width: 100px;
+    left: 0;
+    background-color: rgb(35, 35, 35);
+    /* border-radius: 1.5rem; */
+    position: absolute;
+    z-index: 2;
+    transition: left 0.25s ease, width 0.25s ease;
+    border-radius: 1.5rem;
+}
+
+/* .nav-links li {
+    background-color: rgb(50, 50, 50);
+} */
+
+#home-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85%;
+}
+
+.greeting-card {
+    height: 30rem;
+    border-left: 0.2rem solid rgb(80, 80, 80);
+    color: white;
+}
+
+.first-section {
+    display: flex;
+    flex-direction: column;
+    height: calc(100% / 3);
+    justify-content: center;
+    margin-left: 2rem;
+    row-gap: 0.75rem;
+}
+
+.first-section-first-row {
+    display: flex;
+    gap: 0.5rem;
+}
+
+@keyframes patternAnimation {
+    0% {
+        transform: translateX(10rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.first-section-first-row 
+div:first-child {
+    height: 1rem;
+    width: 15rem;
+    background-image: linear-gradient(to right, blue, rgb(110, 110, 255));
+    border-radius: 2px;
+    animation: patternAnimation 0.25s ease 0.25s 1 normal forwards running;
+    opacity: 0;
+}
+
+.first-section-first-row 
+div:nth-child(2) {
+    height: 1rem;
+    width: 12rem;
+    background-image: linear-gradient(to right, yellow, rgb(255, 255, 140));
+    border-radius: 2px;
+    opacity: 0;
+    animation: patternAnimation 0.25s ease 0.5s 1 normal forwards running;
+}
+
+.first-section-first-row 
+div:last-child {
+    height: 1rem;
+    width: 1rem;
+    background-image: linear-gradient(to right, yellow, rgb(255, 255, 140));
+    border-radius: 50%;
+    opacity: 0;
+    animation: patternAnimation 0.25s ease 0.75s 1 normal forwards running;
+}
+
+.first-section-second-row div {
+    width: 35rem;
+    height: 1rem;
+    background-image: linear-gradient(to right, purple, rgb(210, 0, 210));
+    border-radius: 2px;
+    animation: patternAnimation 0.25s ease 0s 1 normal forwards running;
+    opacity: 0;
+}
+
+.first-section-third-row {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.first-section-third-row 
+div:first-child {
+    height: 1rem;
+    width: 12rem;
+    background-image: linear-gradient(to right, rgb(255, 90, 90), red);
+    border-radius: 2px;
+    animation: patternAnimation 0.25s ease 0.25s 1 normal forwards running;
+    opacity: 0;
+}
+
+.first-section-third-row 
+div:nth-child(2) {
+    height: 1rem;
+    width: 1rem;
+    background-color: aqua;
+    border-radius: 2px;
+    opacity: 0;
+    animation: patternAnimation 0.25s ease 0.5s 1 normal forwards running;
+}
+
+.first-section-third-row 
+div:nth-child(3) {
+    height: 1rem;
+    width: 8rem;
+    background-image: linear-gradient(to right, yellow, rgb(255, 255, 140));
+    border-radius: 2px;
+    opacity: 0;
+    animation: patternAnimation 0.25s ease 0.75s 1 normal forwards running;
+}
+
+.first-section-third-row
+div:last-child {
+    height: 1rem;
+    width: 15rem;
+    background-image: linear-gradient(to right, blue, rgb(110, 110, 255));
+    border-radius: 2px;
+    animation: patternAnimation 0.25s ease 1s 1 normal forwards running;
+    opacity: 0;
+}
+
+.first-section-fourth-row {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.first-section-fourth-row 
+div:first-child {
+    height: 1rem;
+    width: 20rem;
+    background-image: linear-gradient(to right, blue, rgb(110, 110, 255));
+    border-radius: 2px;
+    animation: patternAnimation 0.25s ease 0.25s 1 normal forwards running;
+    opacity: 0;
+}
+
+.first-section-fourth-row 
+div:nth-child(2) {
+    height: 1rem;
+    width: 10rem;
+    background-image: linear-gradient(to right, yellow, rgb(255, 255, 140));
+    border-radius: 2px;
+    opacity: 0;
+    animation: patternAnimation 0.25s ease 0.5s 1 normal forwards running;
+}
+
+.first-section-fourth-row 
+div:nth-child(3) {
+    height: 1rem;
+    width: 1rem;
+    background-image: linear-gradient(to right, yellow, rgb(255, 255, 140));
+    border-radius: 50%;
+    opacity: 0;
+    animation: patternAnimation 0.25s ease 0.75s 1 normal forwards running;
+} 
+
+.first-section-fourth-row 
+div:last-child {
+    height: 1rem;
+    width: 15rem;
+    background-image: linear-gradient(to right, rgb(255, 90, 90), red);
+    border-radius: 2px;
+    animation: patternAnimation 0.25s ease 1s 1 normal forwards running;
+    opacity: 0;
+}
+
+.first-section-fifth-row {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.first-section-fifth-row 
+div:first-child {
+    height: 1rem;
+    width: 15rem;
+    background-image: linear-gradient(to right, blue, rgb(110, 110, 255));
+    border-radius: 2px;
+    animation: patternAnimation 0.25s ease 0.25s 1 normal forwards running;
+    opacity: 0;
+}
+
+.first-section-fifth-row 
+div:nth-child(2) {
+    height: 1rem;
+    width: 1rem;
+    background-image: linear-gradient(to right, yellow, rgb(255, 255, 140));
+    border-radius: 2px;
+    opacity: 0;
+    animation: patternAnimation 0.25s ease 0.5s 1 normal forwards running;
+}
+
+.first-section-fifth-row 
+div:nth-child(3) {
+    height: 1rem;
+    width: 12rem;
+    background-image: linear-gradient(to right, yellow, rgb(255, 255, 140));
+    border-radius: 2px;
+    opacity: 0;
+    animation: patternAnimation 0.25s ease 0.75s 1 normal forwards running;
+}
+
+.first-section-fifth-row 
+div:last-child {
+    height: 1rem;
+    width: 18rem;
+    background-image: linear-gradient(to right, purple, rgb(210, 0, 210));
+    border-radius: 2px;
+    animation: patternAnimation 0.25s ease 1s 1 normal forwards running;
+    opacity: 0;
+}
+
+.second-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 0.75rem;
+    height: calc(100% / 3);
+    opacity: 0;
+    animation: patternAnimation 0.25s ease 0.5s 1 normal forwards running;
+    margin-left: 4rem;
+}
+
+.second-section h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.second-section h2 {
+    margin: 0;
+}
+
+.third-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: calc(100% / 3);
+    margin-left: 2rem;
+    row-gap: 0.75rem;
+}
+
+.third-section-first-row {
+    display: flex;
+    column-gap: 0.5rem;
+}
+
+.third-section-first-row 
+div:first-child {
+    height: 1rem;
+    width: 20rem;
+    background-image: linear-gradient(to right, rgb(255, 90, 90), red);
+    border-radius: 2px;
+    animation: patternAnimation 0.25s ease 0.25s 1 normal forwards running;
+    opacity: 0;
+}
+
+.third-section-first-row 
+div:nth-child(2) {
+    height: 1rem;
+    width: 1rem;
+    background-image: linear-gradient(to right, yellow, rgb(255, 255, 140));
+    border-radius: 50%;
+    opacity: 0;
+    animation: patternAnimation 0.25s ease 0.5s 1 normal forwards running;
+}
+
+.third-section-second-row {
+    display: flex;
+    column-gap: 0.5rem;
+}
+
+.third-section-second-row 
+div:first-child {
+    height: 1rem;
+    width: 15rem;
+    background-image: linear-gradient(to right, purple, rgb(255, 75, 255));
+    border-radius: 2px;
+    animation: patternAnimation 0.25s ease 0.25s 1 normal forwards running;
+    opacity: 0;
+}
+
+.third-section-second-row
+div:nth-child(2) {
+    height: 1rem;
+    width: 10rem;
+    background-image: linear-gradient(to right, blue, rgb(110, 110, 255));
+    border-radius: 2px;
+    opacity: 0;
+    animation: patternAnimation 0.25s ease 0.5s 1 normal forwards running;
+}
+
+.third-section-second-row
+div:last-child {
+    height: 1rem;
+    width: 20rem;
+    background-image: linear-gradient(to right, purple, rgb(255, 75, 255));
+    border-radius: 2px;
+    opacity: 0;
+    animation: patternAnimation 0.25s ease 0.75s 1 normal forwards running;
+}
+
+.third-section-third-row {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.third-section-third-row
+div:first-child {
+    height: 1rem;
+    width: 22rem;
+    background-image: linear-gradient(to right, blue, rgb(110, 110, 255));
+    border-radius: 2px;
+    opacity: 0;
+    animation: patternAnimation 0.25s ease 0.5s 1 normal forwards running;
+}
+
+.third-section-third-row
+div:last-child {
+    height: 1rem;
+    width: 15rem;
+    background-image: linear-gradient(to right, purple, rgb(255, 75, 255));
+    border-radius: 2px;
+    opacity: 0;
+    animation: patternAnimation 0.25s ease 0.75s 1 normal forwards running;
+}
+
+.third-section-fourth-row {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.third-section-fourth-row div {
+    height: 1rem;
+    width: 25rem;
+    background-image: linear-gradient(to right, rgb(255, 90, 90), red);
+    border-radius: 2px;
+    animation: patternAnimation 0.25s ease 0s 1 normal forwards running;
+    opacity: 0;
+}
+
+.third-section-fifth-row {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.third-section-fifth-row
+div:first-child {
+    height: 1rem;
+    width: 10rem;
+    background-image: linear-gradient(to right, purple, rgb(255, 75, 255));
+    border-radius: 2px;
+    animation: patternAnimation 0.25s ease 0.25s 1 normal forwards running;
+    opacity: 0;
+}
+
+.third-section-fifth-row
+div:nth-child(2) {
+    height: 1rem;
+    width: 1rem;
+    background-image: linear-gradient(to right, yellow, rgb(255, 255, 140));
+    border-radius: 2px;
+    opacity: 0;
+    animation: patternAnimation 0.25s ease 0.5s 1 normal forwards running;
+}
+
+.third-section-fifth-row
+div:nth-child(3) {
+    height: 1rem;
+    width: 15rem;
+    background-image: linear-gradient(to right, yellow, rgb(255, 255, 140));
+    border-radius: 2px;
+    opacity: 0;
+    animation: patternAnimation 0.25s ease 0.75s 1 normal forwards running;
+}
+
+.third-section-fifth-row
+div:last-child {
+    height: 1rem;
+    width: 5rem;
+    background-image: linear-gradient(to right, blue, rgb(110, 110, 255));
+    border-radius: 2px;
+    animation: patternAnimation 0.25s ease 1s 1 normal forwards running;
+    opacity: 0;
+}
+
+#about-me-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: white;
+}
+
+.introduction {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60rem;
+    height: 30rem;
+}
+
+.introduction h3 {
+    font-size: 1.25rem;
+    margin: 0;
+    color: rgb(149, 66, 228);
+}
+
+.introduction h1 {
+    font-size: 2.5rem;
+}
+
+.introduction p {
+    font-size: 1.25rem;
+    margin: 0;
+    line-height: 1.5;
+}
+
+#projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 150%;
+    color: white;
+}
+
+.smth {
+    width: 60rem;
+}
+
+.smth h3 {
+    font-size: 1.25rem;
+    margin: 0;
+    color: rgb(149, 66, 228);
+}
+
+.projects-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 60rem;
+    height: 40rem;
+    grid-gap: 2rem;
+    color: black;
+}
+
+.projects-list article:first-child {
+    background-image: linear-gradient(to bottom right, rgb(242, 255, 0) , rgb(254, 253, 140));
+    padding: 1rem;
+}
+
+.projects-list article:nth-child(2) {
+    background-image: linear-gradient(to right, rgb(243, 111, 255) , rgb(152, 67, 255));
+    padding: 1rem;
+}
+
+.projects-list article:nth-child(3) {
+    background-image: linear-gradient(to bottom, rgb(172, 250, 130) , rgb(47, 254, 0));
+    padding: 1rem;
+}
+
+.projects-list article:nth-child(4) {
+    background-image: linear-gradient(to top, rgb(243, 111, 255) , rgb(152, 67, 255));
+    padding: 1rem;
+}
+
+.projects-list article:nth-child(5) {
+    background-image: linear-gradient(to right, rgb(172, 250, 130) , rgb(47, 254, 0));
+    padding: 1rem;
+}
+
+.projects-list article:last-child {
+    background-image: linear-gradient(to bottom right, rgb(242, 255, 0) , rgb(254, 253, 140));
+    padding: 1rem;
+}
+
+.projects-list article:hover {
+    background-image: none;
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+}
+
+.projects-list article:hover .github-icon {
+    fill: white;
+}
+
+.repository-link {
+    display: flex;
+    justify-content: end;
+    height: 10%;
+    align-items: center;
+}
+
+.repository-link a {
+    -webkit-user-drag: none;
+}
+
+.project-name h1 {
+    margin: 0;
+}
+
+.project-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.stack {
+    display: flex;
+    height: 10%;
+    align-items: center;
+    justify-content: center;
+}
+
+.stack ul {
+    display: flex;
+    padding: 0;
+    list-style-type: none;
+    column-gap: 2rem;
+    margin: 0;
+    font-size: 1rem;
+}
+
+.github-profile-information {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 60rem;
+}
+
+.github-profile-information h3 {
+    font-weight: normal;
+    font-size: 1.25rem;
+}
+
+.github-profile-information article {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 24rem;
+    height: 5rem;
+    border-left: 3px solid rgb(170, 170, 170);
+    border-right: 3px solid rgb(170, 170, 170);
+    border-top: 3px solid rgb(170, 170, 170);
+    border-bottom: 5px solid rgb(170, 170, 170);
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.github-profile-information article:hover {
+    border-left-color: white;
+    border-right-color: white;
+    border-top-color: white;
+    border-bottom-color: white;
+}
+
+#contact-me-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: white;
+    gap: 5rem;
+}
+
+#contact-me-section h3 {
+    color: rgb(149, 66, 228);
+    margin: 0;
+}
+
+#contact-me-section h1 {
+    font-size: 3rem;
+}
+
+.headers {
+    width: 60rem;
+}
+
+.contacts {
+    display: flex;
+    width: 60rem;
+    justify-content: space-around;
+}
+
+.telegram-icon, .instagram-icon, .linkedin-icon {
+    width: 10rem;
+    height: 10rem;
+    fill: white;
+}
