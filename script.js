@@ -1,13 +1,13 @@
 function setStyles(navbar) {
-  if (navbar.style.backgroundColor !== "rgba(10, 10, 10, 0.9)") {
+  if (navbar.style.backgroundColor !== "rgba(8, 8, 8, 0.8)") {
     let tabIndicator = document.querySelector(".indicator");
 
     tabIndicator.style.marginLeft = "2rem";
-    navbar.style.backgroundColor = "rgba(10, 10, 10, 0.9)";
+    navbar.style.backgroundColor = "rgba(8, 8, 8, 0.8)";
     navbar.style.backdropFilter = "blur(5px)";
     navbar.style.padding = "1rem 2rem";
     navbar.style.borderRadius = "2.5rem";
-    navbar.style.border = "3px solid rgb(50, 50, 50)";
+    navbar.style.border = "2px solid rgb(50, 50, 50)";
   }
 }
 
@@ -102,25 +102,25 @@ window.onscroll = () => {
 };
 
 document.querySelector(".home-link").onclick = () => {
-  // document.getElementById("nav-bar-container").scrollIntoView({ behavior: "smooth" });
-  window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  document.getElementById("nav-bar-container").scrollIntoView({ behavior: "smooth" });
+  // window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
 };
 
 document.querySelector(".about-link").onclick = () => {
-  // document.getElementById("about-me-section").scrollIntoView({ behavior: "smooth"});
-  window.scrollTo({ top: window.innerHeight, left: 0, behavior: "smooth" });
+  document.getElementById("about-me-section").scrollIntoView({ behavior: "smooth"});
+  // window.scrollTo({ top: window.innerHeight + 0.2, left: 0, behavior: "smooth" });
 };
 
 document.querySelector(".projects-link").onclick = () => {
-  // document.getElementById("projects").scrollIntoView({ behavior: "smooth" });
-  window.scrollTo({ top: window.innerHeight * 2, left: 0, behavior: "smooth" });
+  document.getElementById("projects").scrollIntoView({ behavior: "smooth" });
+  // window.scrollTo({ top: window.innerHeight * 2, left: 0, behavior: "smooth" });
 };
 
 document.querySelector(".contact-link").onclick = () => {
-  // document.getElementById("contact-me-section").scrollIntoView({ behavior: "smooth" });
-  window.scrollTo({
-    top: window.innerHeight * 3.5,
-    left: 0,
-    behavior: "smooth",
-  });
+  document.getElementById("contact-me-section").scrollIntoView({ behavior: "smooth" });
+  // window.scrollTo({
+  //   top: window.innerHeight * 3.5,
+  //   left: 0,
+  //   behavior: "smooth",
+  // });
 };

@@ -33,19 +33,19 @@ a, h1, h2, h3, p, li {
     color: white;
     position: fixed;
     z-index: 1;
-    height: 3.25rem;
+    height: 3rem;
 }
 
 .nav-bar ul {
     display: flex;
     height: 100%;
-    /* justify-content: center; */
     align-items: center;
     list-style-type: none;
     column-gap: 3rem;
     padding: 0;
     margin: 0;
-    font-size: 1.25rem;
+    font-size: 1rem;
+    font-weight: 600;
 }
 
 .nav-links li {
@@ -97,17 +97,12 @@ a, h1, h2, h3, p, li {
     height: 3.25rem;
     width: 100px;
     left: 0;
-    background-color: rgb(35, 35, 35);
-    /* border-radius: 1.5rem; */
+    background-color: rgb(25, 25, 25);
     position: absolute;
     z-index: 2;
     transition: left 0.25s ease, width 0.25s ease;
     border-radius: 1.5rem;
 }
-
-/* .nav-links li {
-    background-color: rgb(50, 50, 50);
-} */
 
 #home-section {
     display: flex;
@@ -550,34 +545,35 @@ div:last-child {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     width: 60rem;
-    height: 40rem;
+    height: 38rem;
     grid-gap: 2rem;
     color: black;
 }
 
+.projects-list > article {
+    transition: all 0.2s ease-in-out;
+    border: 2px solid transparent;
+    padding: 1.25rem 1rem;
+}
+
 .projects-list article:first-child {
     background-image: linear-gradient(to bottom right, rgb(242, 255, 0) , rgb(254, 253, 140));
-    padding: 1rem;
 }
 
 .projects-list article:nth-child(2) {
     background-image: linear-gradient(to right, rgb(243, 111, 255) , rgb(152, 67, 255));
-    padding: 1rem;
 }
 
 .projects-list article:nth-child(3) {
     background-image: linear-gradient(to bottom, rgb(172, 250, 130) , rgb(47, 254, 0));
-    padding: 1rem;
 }
 
 .projects-list article:nth-child(4) {
     background-image: linear-gradient(to top, rgb(243, 111, 255) , rgb(152, 67, 255));
-    padding: 1rem;
 }
 
 .projects-list article:nth-child(5) {
     background-image: linear-gradient(to right, rgb(172, 250, 130) , rgb(47, 254, 0));
-    padding: 1rem;
 }
 
 .projects-list article:last-child {
@@ -615,7 +611,7 @@ div:last-child {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80%;
+    height: 75%;
     font-size: 1.5rem;
     font-weight: bolder;
     text-align: center;
@@ -623,18 +619,25 @@ div:last-child {
 
 .stack {
     display: flex;
-    height: 10%;
+    height: 15%;
     align-items: center;
     justify-content: center;
 }
 
 .stack ul {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     padding: 0;
     list-style-type: none;
     column-gap: 2rem;
     margin: 0;
     font-size: 1rem;
+    font-weight: 600;
+}
+
+.stack ul > li {
+    padding: 0.25rem 0;
 }
 
 .github-profile-information {
@@ -642,33 +645,21 @@ div:last-child {
     flex-direction: column;
     justify-content: start;
     width: 60rem;
+    padding-top: 2.5rem;
 }
 
-.github-profile-information h3 {
-    font-weight: normal;
+.github-profile h3 {
     font-size: 1.25rem;
+    margin: 0;
+    color: rgb(149, 66, 228);
 }
 
-.github-profile-information article {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 24rem;
-    height: 5rem;
-    border-left: 3px solid rgb(170, 170, 170);
-    border-right: 3px solid rgb(170, 170, 170);
-    border-top: 3px solid rgb(170, 170, 170);
-    border-bottom: 5px solid rgb(170, 170, 170);
-    padding: 1rem;
-    box-sizing: border-box;
+.github-profile-link {
+    text-decoration: none;
+    color: rgb(149, 66, 228);
 }
 
-.github-profile-information article:hover {
-    border-left-color: white;
-    border-right-color: white;
-    border-top-color: white;
-    border-bottom-color: white;
-}
+
 
 #contact-me-section {
     display: flex;
@@ -696,10 +687,10 @@ div:last-child {
 .contacts {
     display: flex;
     width: 60rem;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
-.telegram-icon, .instagram-icon, .linkedin-icon {
+.telegram-icon, .twitter-icon, .linkedin-icon {
     width: 10rem;
     height: 10rem;
     fill: white;
